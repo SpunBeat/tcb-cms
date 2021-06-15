@@ -1,0 +1,253 @@
+<div class="div-principal bg-white m-3 m-md-5">
+    <div class="row justify-content-center" [ngClass]="!flagAgregar?'div-completo':'div-auto'">
+
+      <div class="col-10">
+        <div class="row">
+          <div class="col-12 mb-4 mt-5">
+            <label class="label-recompensas">Recompensas</label>
+            <button *ngIf="flagAgregar" (click)="agregar(false)" class="btn bg-transparent btn-regresar">Regresar</button>
+          </div>
+    
+          <div *ngIf="!flagAgregar" class="col-12 my-3">
+            <div class="col-6 col-lg-4 float-end">
+                <button (click)="agregar(true)" class="btn bg-transparent btn-agregar">Agregar</button>
+            </div>
+          </div>
+
+          <div *ngIf="!flagAgregar" class="table-responsive table-border">
+            <table class="table table-bordered table-hover">
+                <thead class="thead-table">
+                    <tr>
+                      <th scope="col" class="th-left">ID 
+                        <button class="btn-flecha">
+                          <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957" viewBox="0 0 10.351 5.957">
+                            <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
+                              <path id="Trazado_479" data-name="Trazado 479" d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)" fill="#fff"/>
+                              <path id="Trazado_480" data-name="Trazado 480" d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)" fill="#fff"/>
+                            </g>
+                          </svg>
+                        </button>
+                      </th>
+                      <th scope="col" style="width: 20%;">Nombre de recompensa
+                        <button class="btn-flecha">
+                          <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957" viewBox="0 0 10.351 5.957">
+                            <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
+                              <path id="Trazado_479" data-name="Trazado 479" d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)" fill="#fff"/>
+                              <path id="Trazado_480" data-name="Trazado 480" d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)" fill="#fff"/>
+                            </g>
+                          </svg>
+                        </button>
+                      </th>
+                      <th scope="col">Fecha
+                        <button class="btn-flecha">
+                          <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957" viewBox="0 0 10.351 5.957">
+                            <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
+                              <path id="Trazado_479" data-name="Trazado 479" d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)" fill="#fff"/>
+                              <path id="Trazado_480" data-name="Trazado 480" d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)" fill="#fff"/>
+                            </g>
+                          </svg>
+                        </button>
+                      </th>
+
+                      <th scope="col">Empresa
+                        <button class="btn-flecha">
+                          <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957" viewBox="0 0 10.351 5.957">
+                            <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
+                              <path id="Trazado_479" data-name="Trazado 479" d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)" fill="#fff"/>
+                              <path id="Trazado_480" data-name="Trazado 480" d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)" fill="#fff"/>
+                            </g>
+                          </svg>
+                        </button>
+                      </th>
+                      <th scope="col" class="th-right">Nivel
+                        <button class="btn-flecha">
+                          <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957" viewBox="0 0 10.351 5.957">
+                            <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
+                              <path id="Trazado_479" data-name="Trazado 479" d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)" fill="#fff"/>
+                              <path id="Trazado_480" data-name="Trazado 480" d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)" fill="#fff"/>
+                            </g>
+                          </svg>
+                        </button>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr (click)="mostrar(true)">
+                      <th scope="row">R-256134</th>
+                      <td>Recompensa</td>
+                      <td>27-10-2020</td>
+                      <td>Empresa 1</td>
+                      <td>2</td>
+                    </tr>
+                    
+                    <tr (click)="mostrar(true)">
+                        <th scope="row">R-256134</th>
+                        <td>Recompensa</td>
+                        <td>27-10-2020</td>
+                        <td>Empresa 1</td>
+                        <td>2</td>
+                      </tr>
+                      <tr (click)="mostrar(true)">
+                        <th scope="row">R-256134</th>
+                        <td>Recompensa</td>
+                        <td>27-10-2020</td>
+                        <td>Empresa 1</td>
+                        <td>2</td>
+                      </tr>
+                      <tr (click)="mostrar(true)">
+                        <th scope="row">R-256134</th>
+                        <td>Recompensa</td>
+                        <td>27-10-2020</td>
+                        <td>Empresa 1</td>
+                        <td>2</td>
+                      </tr>
+                      <tr (click)="mostrar(true)">
+                        <th scope="row">R-256134</th>
+                        <td>Recompensa</td>
+                        <td>27-10-2020</td>
+                        <td>Empresa 1</td>
+                        <td>2</td>
+                      </tr>
+                      <tr (click)="mostrar(true)">
+                        <th scope="row">R-256134</th>
+                        <td>Recompensa</td>
+                        <td>27-10-2020</td>
+                        <td>Empresa 1</td>
+                        <td>2</td>
+                      </tr>
+                      <tr (click)="mostrar(true)">
+                        <th scope="row">R-256134</th>
+                        <td>Recompensa</td>
+                        <td>27-10-2020</td>
+                        <td>Empresa 1</td>
+                        <td>2</td>
+                      </tr>
+                  </tbody>
+            </table>
+          </div>
+
+          <div *ngIf="flagAgregar" class="col-12 p-0">
+
+          <!-- INFROMACION GENERAL -->
+          <div class="row mb-3 mt-4 justify-content-evenly">
+
+            <div class="col-10 col-md-5 col-lg-4">
+
+              <div class="container-input">
+                  <label class="label-input mb-2">ID</label>
+                  <input type="number" class="d-block w-100 div-input" id="inid" name="id" placeholder="256134">
+              </div>
+
+              <div class="container-input mt-3">
+                <label class="label-input mb-2">Promotor</label>
+                <input type="text" class="d-block w-100 div-input" id="inpromotor" name="promotor" placeholder="Mondotondo">
+              </div>
+
+              <div class="container-input mt-3">
+                <label class="label-input mb-2">Nivel</label>
+                <input type="number" class="d-block w-100 div-input" id="innivel" name="nivel" placeholder="2">
+              </div>
+
+              <div class="container-input mt-3">
+                <label class="label-input d-block mb-2">Imagen</label>
+                <div class="row align-items-end">
+                  <div class="col-12 col-xl-5">
+                    <div class="div-img">
+                      <label class="label-alt">Imagen.png</label>
+                      <!-- <img class="img-preview img-fluid" src="" alt="archivo"> -->
+                    </div>
+                    
+                  </div>
+  
+                  <div class="col-12 col-xl-7 align-self-end position-relative">
+                    <button class="btn-file w-100 mb-4 mt-2 mt-xl-0">Eliminar archivo</button>
+
+                    <label class="btn btn-file d-block align-self-end position-absolute" style="width: 89%; bottom: 0;"  for="fileupload">Cargar archivo</label>
+                    <input class="fileupload" id="fileupload" type="file"/>
+                  </div>
+
+                  
+                </div>
+
+              </div>
+          
+            </div>
+
+            <div class="col-10 col-md-5 col-lg-4">
+
+                <div class="container-input">
+                    <label class="label-input mb-2">Nombre</label>
+                    <input type="text" class="d-block w-100 div-input" id="innombre" name="nombre" placeholder="Mondotondo">
+                  </div>
+
+              <div class="container-input mt-3">
+                  <label class="label-input mb-2">Descripción</label>
+                  <textarea class="form-control d-block w-100 txtarea" id="FormControlTextarea1" placeholder="Creamos soluciones empleando herramientas de comunicación y tecnología para transparentar de forma clara y contextualizada cualquier tipo de información en posesión de organizaciones públicas, privadas o con fines sociales. Contamos con distintos servicios para mejorar la percepción de las organizaciones." rows="3"></textarea>
+              </div>
+
+              <div class="container-input mt-3">
+                <label class="label-input mb-2">Recompensa fija</label>
+                <label class="switch" style="float: right;"><input type="checkbox" checked/>    <div></div>
+                </label>
+              </div>
+
+              <div class="container-input mt-3">
+                <label class="label-input mb-2">Activar recompensa</label>
+                <label class="switch" style="float: right;"><input type="checkbox" checked/>    <div></div>
+                </label>
+              </div>
+          
+            </div>
+
+            <div class="col-10 col-md-5 col-lg-4">
+
+                <div class="container-input mt-3 mt-md-4 mt-lg-0">
+                    <label class="label-input mb-2">Descuento total</label>
+                    <input type="number" class="d-block w-100 div-input" id="indtotal" name="dtotal" placeholder="Mondotondo">
+                </div>
+  
+                <div class="container-input mt-3">
+                  <label class="label-input mb-2">Comisión The Color Book</label>
+                  <input type="text" class="d-block w-100 div-input" id="incomision" name="comision" placeholder="Mondotondo">
+                </div>
+  
+                <div class="container-input mt-3">
+                  <label class="label-input mb-2">Descuento al usuario</label>
+                  <input type="number" class="d-block w-100 div-input" id="indtousuario" name="dtousuario" placeholder="Mondotondo">
+                </div>
+
+                <div class="container-input mt-3">
+                    <label class="label-input mb-2">Costo en colores</label>
+                    <input type="number" class="d-block w-100 div-input" id="incolores" name="colores" placeholder="1500 colores">
+                </div>
+
+                <div class="container-input mt-4">
+                    <label class="label-input mb-2">Generación automática de código numérico</label>
+                </div>
+          
+            </div>
+
+
+            <div class="col-12 mt-5">
+
+              <div class="row justify-content-end my-5">
+                <div class="col-6 col-lg-4">
+                  <button class="btn bg-transparent btn-recompensa">Eliminar recompensa</button>
+                </div>
+
+                <div class="col-6 col-lg-4">
+                    <button class="btn bg-transparent btn-guardar">Guardar</button>
+                  </div>
+              </div>
+              
+            </div>
+
+          </div>
+
+      </div>
+
+    </div>
+</div>
+    </div>
+</div>
+

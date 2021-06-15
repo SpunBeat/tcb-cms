@@ -1,0 +1,89 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,500&display=swap');
+
+body{
+    background-color: #E8E8E8;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-check, .label-check3, .label-check4, .label-check5{
+    box-shadow: none !important;
+}
+
+.btn-regresar, .btn-agregar, .btn-guardar, .btn-verificar, .btn-enviar, .btn-recompensa, .btn-table-aceptar, .btn-table-rechazar{
+    box-shadow: none !important;
+}
+
+.btn-check3 + .label-check3,.btn-check4 + .label-check4,.btn-check5 + .label-check5{
+    font-size: 14px !important;
+}
+
+.btn-file{
+    font-size: 11px !important;
+}
+
+.div-img{
+    height: 115px !important;
+      width: 115px !important;
+      border: 1px solid #7E7E7E;
+      border-radius: 10px;
+      text-align: center;
+  }
+  
+  @media (min-width: 1200px) and (max-width: 1349px) {
+    .div-img{
+      height: 105px !important;
+        width: 105px !important;
+        border: 1px solid #7E7E7E;
+        
+    }
+  }
+
+.label-alt{
+    color: #7E7E7E;
+    font-weight: 600;
+    font-size: 8px;
+}
+
+
+@media screen and (min-width:1024px) {
+    .btn-agregar{
+        width: 211px !important;
+    }
+}
+
+
+/* .td-no-border{
+    padding: 0 !important;
+    border-right: none;
+    div{
+        padding: 8px;
+        border-right: 1px solid gray;
+
+         width: 100%;
+         height: 100%;
+    }
+} */
+
+
+.table-border{
+    table {
+        width: 100%;
+        border-collapse: inherit;
+        table-layout: fixed;
+        text-align: center;
+        border-radius: 30px;
+        border-spacing: 0px;
+      }
+      
+      table td {
+        border-left: none;
+        border-bottom: 1px solid gray !important;
+      }
+      table th:first-child{
+        border-left: 1px solid gray;
+        border-right: 1px solid gray !important;
+        border-bottom: 1px solid gray !important;
+      }
+    
+}

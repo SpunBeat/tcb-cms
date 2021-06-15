@@ -1,0 +1,227 @@
+.div-principal{
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 1199.98px) {
+    .container-fluid, .col-container{
+        height: fit-content;
+    }
+
+    .div-title{
+        padding-left: 0;
+    }
+}
+
+.col-menu{
+    background-color: #F8687A;
+}
+
+.div-contenedor{
+    border-radius: 5px;
+}
+
+.nav-link{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+u{
+    text-decoration: none;
+}
+
+.nav-link:active > u, .nav-link.active > u{
+    text-decoration: none;
+    border-bottom: 3px solid white;
+}   
+
+li{
+    list-style-type:none;
+}
+
+.div-title{
+    padding-left: 20px;
+}
+
+.label-title{
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 20px;
+}
+
+.container1-dashboard{
+    background-color: #F8F8F8;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(156,156,156,0.6);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(156,156,156,0.6);
+    box-shadow: 0px 0px 5px 0px rgba(156,156,156,0.6);
+    text-align: center;
+}
+
+.cuadricula{
+    color: white;
+}
+
+.row-acciones > .col-accion{
+    border-radius: 10px;
+}
+
+.col-social{
+    background-image: linear-gradient(to right, #f8e17c, #f8e073, #f9de69, #f9dd5f, #fadb55);
+}
+
+.col-legislativo{
+    background-image: linear-gradient(to right, #8a63d6, #875fd4, #845bd3, #8056d1, #7d52cf);
+}
+
+.col-fauna{
+    background-image: linear-gradient(to right, #fc8666, #fc8160, #fc7d5a, #fc7853, #fc734d);
+}
+
+.col-tierra{
+    background-image: linear-gradient(to right, #71ebb5, #63e9ad, #53e7a4, #42e59b, #2ce392);
+}
+
+.col-agua{
+    background-image: linear-gradient(to right, #75a5fd, #689dfe, #5b94ff, #4e8cff, #4083ff);
+}
+
+.col-emergencia{
+    background-image: linear-gradient(to right, #f8687a, #f85f72, #f85669, #f84c61, #f74158);
+}
+
+.label-porcent{
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.p-accion{
+    font-size: 11px;
+    font-weight: 700;
+}
+
+@media (min-width: 1200px) {
+    .div-datos-co2> .label-cantidad, .div-datos-agua> .label-cantidad{
+        font-size: 25px !important;
+    }
+}
+
+.container1-dashboard> label{
+    font-size: 32px;
+    font-weight: bold;
+    color: #7E7E7E;
+}
+
+.row-containers > .label-containers, .row-grafica > .label-container-grafica, .row-select > .label-select{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.label-containers, .label-select{
+    margin-bottom: 5px;
+}
+
+.label-select-option{
+    font-size: 10px;
+    font-weight: 600;
+    color: gray;
+}
+
+.container2-dashboard{
+    height: 70px;
+    background-color: #F8F8F8;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(156,156,156,0.6);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(156,156,156,0.6);
+    box-shadow: 0px 0px 5px 0px rgba(156,156,156,0.6);
+}
+
+.container2-dashboard> label{
+    font-size: 32px;
+    font-weight: bold;
+    color: #7E7E7E;
+    line-height: 70px;
+}
+
+.div-co2{
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #86fbc7, #73f5ba, #5fefad, #49e9a0, #2ce392);
+    height: 120px;
+}
+
+.div-agua{
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #79a8ff, #6b9fff, #5e96ff, #4f8cff, #4083ff);
+    height: 120px;
+}
+
+@media (max-width: 1399.98px) {
+    .img-co2, .img-agua{
+        width: 65px;
+        height: 45px;
+    }
+}
+
+@media (min-width: 1400px){
+    .div-datos-co2> .label-cantidad, .div-datos-agua> .label-cantidad{
+        font-size: 30px !important;
+    }
+}
+
+.div-datos-co2, .div-datos-agua{
+    color: white;
+    text-align: center;
+    float: right;
+}
+
+.div-datos-co2> .label-cantidad, .div-datos-agua> .label-cantidad{
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 45px;
+}
+
+.div-datos-co2> .label-unidad, .div-datos-agua> .label-unidad{
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 45px;
+}
+
+.container3-dashboard{
+    height: 40px;
+    background-color: #F8F8F8;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(156,156,156,0.6);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(156,156,156,0.6);
+    box-shadow: 0px 0px 5px 0px rgba(156,156,156,0.6);
+}
+
+.container3-dashboard> .label-co2-inicial{
+    font-size: 15px;
+    font-weight: bold;
+    color: #7E7E7E;
+    line-height: 40px;
+}
+
+.container3-dashboard> .label-co2-ahorrado{
+    font-size: 15px;
+    font-weight: bold;
+    color: #2CE392;
+    line-height: 40px;
+}
+
+.container3-dashboard> .label-agua-inicial{
+    font-size: 15px;
+    font-weight: bold;
+    color: #7E7E7E;
+    line-height: 40px;
+}
+
+.container3-dashboard> .label-agua-ahorrada{
+    font-size: 15px;
+    font-weight: bold;
+    color: #4083FF;
+    line-height: 40px;
+}
+

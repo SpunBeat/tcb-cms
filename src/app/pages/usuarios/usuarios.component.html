@@ -1,0 +1,447 @@
+<div class="div-principal bg-white m-3 m-md-5">
+
+    <div class="row justify-content-center" [ngClass]="!flagMostrar?'div-completo':'div-auto'">
+        <div *ngIf="!flagMostrar" class="col-12 col-md-10">
+          <div class="row">
+            <div class="col-12 mb-4 mt-5">
+              <label class="label-usuarios">Usuarios</label>
+            </div>
+            <div class="table-responsive">
+              <div class="card table-responsive">
+                <table class="table table-hover m-0">
+                  <thead class="thead-table">
+                      <tr>
+                        <th scope="col" class="col-1 th-left">ID 
+                              <button class="btn-flecha">
+                                <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957" viewBox="0 0 10.351 5.957">
+                                  <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
+                                    <path id="Trazado_479" data-name="Trazado 479" d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)" fill="#fff"/>
+                                    <path id="Trazado_480" data-name="Trazado 480" d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)" fill="#fff"/>
+                                  </g>
+                                </svg>
+                              </button>
+                        </th>
+                        <th scope="col" class="col-3">Usuario
+                          <button class="btn-flecha">
+                            <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957" viewBox="0 0 10.351 5.957">
+                              <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
+                                <path id="Trazado_479" data-name="Trazado 479" d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)" fill="#fff"/>
+                                <path id="Trazado_480" data-name="Trazado 480" d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)" fill="#fff"/>
+                              </g>
+                            </svg>
+                          </button>
+                        </th>
+                        <th scope="col" class="col-3">Correo electrónico
+                          <button class="btn-flecha">
+                            <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957" viewBox="0 0 10.351 5.957">
+                              <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
+                                <path id="Trazado_479" data-name="Trazado 479" d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)" fill="#fff"/>
+                                <path id="Trazado_480" data-name="Trazado 480" d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)" fill="#fff"/>
+                              </g>
+                            </svg>
+                          </button>
+                        </th>
+                        <th scope="col" class="th-right col-3">Número de acciones tomadas
+                          <button class="btn-flecha">
+                            <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957" viewBox="0 0 10.351 5.957">
+                              <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
+                                <path id="Trazado_479" data-name="Trazado 479" d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)" fill="#fff"/>
+                                <path id="Trazado_480" data-name="Trazado 480" d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)" fill="#fff"/>
+                              </g>
+                            </svg>
+                          </button>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr (click)="mostrar(true)">
+                        <th scope="row">U-256134</th>
+                        <td>Lina Pineda</td>
+                        <td>lina.pineda@gmail.com</td>
+                        <td>@23</td>
+                      </tr>
+                      <tr (click)="mostrar(true)">
+                          <th scope="row">U-256134</th>
+                          <td>Lina Pineda</td>
+                          <td>lina.pineda@gmail.com</td>
+                          <td>@23</td>
+                        </tr>
+                        <tr (click)="mostrar(true)">
+                          <th scope="row">U-256134</th>
+                          <td>Lina Pineda</td>
+                          <td>lina.pineda@gmail.com</td>
+                          <td>@23</td>
+                        </tr>
+                        <tr (click)="mostrar(true)">
+                          <th scope="row">U-256134</th>
+                          <td>Lina Pineda</td>
+                          <td>lina.pineda@gmail.com</td>
+                          <td>@23</td>
+                        </tr>
+                        <tr (click)="mostrar(true)">
+                          <th scope="row">U-256134</th>
+                          <td>Lina Pineda</td>
+                          <td>lina.pineda@gmail.com</td>
+                          <td>@23</td>
+                        </tr>
+                        <tr (click)="mostrar(true)">
+                          <th scope="row">U-256134</th>
+                          <td>Lina Pineda</td>
+                          <td>lina.pineda@gmail.com</td>
+                          <td>@23</td>
+                        </tr>
+                        <tr (click)="mostrar(true)" class="last-row">
+                          <th scope="row">U-256134</th>
+                          <td>Lina Pineda</td>
+                          <td>lina.pineda@gmail.com</td>
+                          <td class=" rounded">@23</td>
+                        </tr>
+                    </tbody>
+              </table>
+              </div>
+          </div>
+          </div>
+        </div>
+
+        <div *ngIf="flagMostrar" class="col-12 col-md-10">
+
+          <div class="row justify-content-evenly mb-3">
+            <div class="col-6 col-lg-4 mb-4 mt-5">
+              <label class="label-usuarios">Usuarios</label>
+            </div>
+            <div class="d-none d-lg-inline-block col-lg-4" style="visibility: hidden;">
+              <label class="label-usuarios"></label>
+            </div>
+          
+            <div class="col-5 mt-5 col-lg-4">
+              <button (click)="mostrar(false)" class="btn bg-transparent btn-regresar">Regresar</button>
+            </div>
+          </div>
+
+          <div class="row mb-3 justify-content-evenly">
+
+            <div class="col-10 col-md-5 col-lg-4">
+
+              <div class="container-input">
+                  <label class="label-input">Usuario</label>
+                  <input type="text" class="d-block w-100 div-input" id="inusuario" name="usuario" placeholder="Lina Pineda">
+              </div>
+  
+              <div class="container-input mt-3">
+                  <label class="label-input">Correo</label>
+                  <input type="email" class="d-block w-100 div-input" id="incorreo" name="correo" placeholder="lina.pineda@gmail.com">
+              </div>
+  
+              <div class="container-input mt-3">
+                  <label class="label-input">Número de acciones</label>
+                  <input type="number" class="d-block w-100 div-input" id="inacciones" name="acciones" placeholder="23">
+              </div>
+  
+              <div class="container-input mt-3">
+                  <label class="label-input">Nivel</label>
+                  <input type="number" class="d-block w-100 div-input" id="innivel" name="nivel" placeholder="4">
+              </div>
+          </div>
+
+
+          <div class="col-10 col-md-5 col-lg-4">
+            <div class="container-input">
+                <label class="label-input">Colores</label>
+                <input type="number" class="d-block w-100 div-input" id="incolores" name="colores" placeholder="2570">
+            </div>
+
+            <div class="container-input mt-3">
+              <label class="label-input">Dirección de acción</label>
+              <input type="text" class="d-block w-100 div-input" id="indir1" name="dir1" placeholder="México">
+              <input type="text" class="d-block w-100 div-input mt-2" id="indir2" name="dir2" placeholder="Ciudad de México">
+              <input type="number" class="d-block w-100 div-input mt-2" id="incp" name="cp" placeholder="52280">
+          </div>
+
+            <div class="container-input mt-2">
+                <label class="label-input">Grupo</label>
+                    <select class="div-input d-block w-100">
+                        <option value="0">Grupo</option>
+                        <option value="1">Audi</option>
+                        <option value="2">BMW</option>
+                        <option value="3">Citroen</option>
+                        <option value="4">Ford</option>
+                      </select>
+            </div>
+        </div>
+        <div class="col-10 col-md-5 col-lg-4">
+          <div class="container-input">
+            <label class="label-input">Impacto inicial</label>
+            <input type="text" class="d-block w-100 div-input" id="inco2" name="inicialco2" placeholder="723 ton CO2 eq">
+            <input type="text" class="d-block w-100 div-input mt-2" id="inagua" name="inicialagua" placeholder="36,500 L de agua al año">
+        </div>
+
+        <div class="container-input mt-3">
+          <label class="label-input">Impacto logrado</label>
+          <input type="text" class="d-block w-100 div-input mt-2" id="inlogradoco2" name="logradoco2" placeholder="723 ton CO2 eq">
+            <input type="text" class="d-block w-100 div-input mt-2" id="inlogradoagua" name="logradoagua" placeholder="36,500 L de agua al año">
+      </div>
+        </div>
+
+          </div>
+
+          <div class="row justify-content-center px-3 mt-5">
+            <div class="col-11 col-md-12">
+              <div class="btn-toolbar w-100 p-1" role="toolbar" aria-label="Toolbar with button groups">
+                <span class="w-100 bg-white">
+                  <div class="btn-group div-btn w-100" role="group" aria-label="Basic radio toggle button group">
+                  <input (click)="cambiarOpc(false)" type="radio" class="btn-check btn-check3" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                  <label class="btn label-check3 w-50" for="btnradio1">Acciones</label>
+        
+                  <input (click)="cambiarOpc(true)" type="radio" class="btn-check btn-check4" name="btnradio" id="btnradio2" autocomplete="off">
+                  <label class="btn label-check4 w-50" for="btnradio2">Recompensas</label>
+                </div>
+                </span>
+              </div>
+            </div>
+          </div>
+  
+          <div *ngIf="!flagOpc" class="row justify-content-center my-4">
+            <div class="col-10 col-md-12 table-responsive mb-3">
+              <table class="table table-hover">
+                  <thead class="thead-table">
+                      <tr>
+                        <th scope="col" class="th-left">ID 
+                          <button class="btn-flecha">
+                            <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957" viewBox="0 0 10.351 5.957">
+                              <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
+                                <path id="Trazado_479" data-name="Trazado 479" d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)" fill="#fff"/>
+                                <path id="Trazado_480" data-name="Trazado 480" d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)" fill="#fff"/>
+                              </g>
+                            </svg>
+                          </button>
+                        </th>
+                        <th scope="col">Tipo
+                          <button class="btn-flecha">
+                            <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957" viewBox="0 0 10.351 5.957">
+                              <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
+                                <path id="Trazado_479" data-name="Trazado 479" d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)" fill="#fff"/>
+                                <path id="Trazado_480" data-name="Trazado 480" d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)" fill="#fff"/>
+                              </g>
+                            </svg>
+                          </button>
+                        </th>
+                        <th scope="col">Nombre
+                          <button class="btn-flecha">
+                            <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957" viewBox="0 0 10.351 5.957">
+                              <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
+                                <path id="Trazado_479" data-name="Trazado 479" d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)" fill="#fff"/>
+                                <path id="Trazado_480" data-name="Trazado 480" d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)" fill="#fff"/>
+                              </g>
+                            </svg>
+                          </button>
+                        </th>
+                        <th scope="col">Alcance
+                          <button class="btn-flecha">
+                            <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957" viewBox="0 0 10.351 5.957">
+                              <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
+                                <path id="Trazado_479" data-name="Trazado 479" d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)" fill="#fff"/>
+                                <path id="Trazado_480" data-name="Trazado 480" d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)" fill="#fff"/>
+                              </g>
+                            </svg>
+                          </button>
+                        </th>
+                        <th scope="col">Capítulo
+                          <button class="btn-flecha">
+                            <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957" viewBox="0 0 10.351 5.957">
+                              <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
+                                <path id="Trazado_479" data-name="Trazado 479" d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)" fill="#fff"/>
+                                <path id="Trazado_480" data-name="Trazado 480" d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)" fill="#fff"/>
+                              </g>
+                            </svg>
+                          </button>
+                        </th>
+                        <th scope="col">Monto
+                          <button class="btn-flecha">
+                            <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957" viewBox="0 0 10.351 5.957">
+                              <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
+                                <path id="Trazado_479" data-name="Trazado 479" d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)" fill="#fff"/>
+                                <path id="Trazado_480" data-name="Trazado 480" d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)" fill="#fff"/>
+                              </g>
+                            </svg>
+                          </button>
+                        </th>
+                        <th scope="col" class="th-right">Status
+                          <button class="btn-flecha">
+                            <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957" viewBox="0 0 10.351 5.957">
+                              <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
+                                <path id="Trazado_479" data-name="Trazado 479" d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)" fill="#fff"/>
+                                <path id="Trazado_480" data-name="Trazado 480" d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)" fill="#fff"/>
+                              </g>
+                            </svg>
+                          </button>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="tbody-border-left" style="border: none;">
+                      <tr>
+                        <th scope="row">R-256134</th>
+                        <td>Súmate</td>
+                        <td>Ayuda a la CONANP</td>
+                        <td>Nacional</td>
+                        <td>Legislativo</td>
+                        <td>$ 1,500.00</td>
+                        <td>En proceso</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R-256134</th>
+                        <td>Súmate</td>
+                        <td>Ayuda a la CONANP</td>
+                        <td>Nacional</td>
+                        <td>Legislativo</td>
+                        <td>$ 1,500.00</td>
+                        <td>En proceso</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R-256134</th>
+                        <td>Súmate</td>
+                        <td>Ayuda a la CONANP</td>
+                        <td>Nacional</td>
+                        <td>Legislativo</td>
+                        <td>$ 1,500.00</td>
+                        <td>En proceso</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R-256134</th>
+                        <td>Súmate</td>
+                        <td>Ayuda a la CONANP</td>
+                        <td>Nacional</td>
+                        <td>Legislativo</td>
+                        <td>$ 1,500.00</td>
+                        <td>En proceso</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R-256134</th>
+                        <td>Súmate</td>
+                        <td>Ayuda a la CONANP</td>
+                        <td>Nacional</td>
+                        <td>Legislativo</td>
+                        <td>$ 1,500.00</td>
+                        <td>En proceso</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R-256134</th>
+                        <td>Súmate</td>
+                        <td>Ayuda a la CONANP</td>
+                        <td>Nacional</td>
+                        <td>Legislativo</td>
+                        <td>$ 1,500.00</td>
+                        <td>En proceso</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R-256134</th>
+                        <td>Súmate</td>
+                        <td>Ayuda a la CONANP</td>
+                        <td>Nacional</td>
+                        <td>Legislativo</td>
+                        <td>$ 1,500.00</td>
+                        <td>En proceso</td>
+                      </tr>
+                    </tbody>
+              </table>
+          </div>
+          </div>
+  
+          <div *ngIf="flagOpc" class="row justify-content-center my-4">
+            <div class="col-10 col-md-12 table-responsive mb-3">
+              <table class="table table-hover">
+                  <thead class="thead-table">
+                      <tr>
+                        <th scope="col" class="th-left">ID 
+                          <button class="btn-flecha">
+                            <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957" viewBox="0 0 10.351 5.957">
+                              <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
+                                <path id="Trazado_479" data-name="Trazado 479" d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)" fill="#fff"/>
+                                <path id="Trazado_480" data-name="Trazado 480" d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)" fill="#fff"/>
+                              </g>
+                            </svg>
+                          </button>
+                        </th>
+                        <th scope="col">Nombre
+                          <button class="btn-flecha">
+                            <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957" viewBox="0 0 10.351 5.957">
+                              <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
+                                <path id="Trazado_479" data-name="Trazado 479" d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)" fill="#fff"/>
+                                <path id="Trazado_480" data-name="Trazado 480" d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)" fill="#fff"/>
+                              </g>
+                            </svg>
+                          </button>
+                        </th>
+                        <th scope="col">Nivel
+                          <button class="btn-flecha">
+                            <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957" viewBox="0 0 10.351 5.957">
+                              <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
+                                <path id="Trazado_479" data-name="Trazado 479" d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)" fill="#fff"/>
+                                <path id="Trazado_480" data-name="Trazado 480" d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)" fill="#fff"/>
+                              </g>
+                            </svg>
+                          </button>
+                        </th>
+                        <th scope="col" class="th-right">Monto
+                          <button class="btn-flecha">
+                            <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957" viewBox="0 0 10.351 5.957">
+                              <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
+                                <path id="Trazado_479" data-name="Trazado 479" d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)" fill="#fff"/>
+                                <path id="Trazado_480" data-name="Trazado 480" d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)" fill="#fff"/>
+                              </g>
+                            </svg>
+                          </button>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="tbody-border-left" style="border: none;">
+                      <tr>
+                        <th scope="row">R-256134</th>
+                        <td>Ayuda a la CONANP</td>
+                        <td>2</td>
+                        <td>$ 1,500.00</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R-256134</th>
+                        <td>Ayuda a la CONANP</td>
+                        <td>2</td>
+                        <td>$ 1,500.00</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R-256134</th>
+                        <td>Ayuda a la CONANP</td>
+                        <td>2</td>
+                        <td>$ 1,500.00</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R-256134</th>
+                        <td>Ayuda a la CONANP</td>
+                        <td>2</td>
+                        <td>$ 1,500.00</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R-256134</th>
+                        <td>Ayuda a la CONANP</td>
+                        <td>2</td>
+                        <td>$ 1,500.00</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R-256134</th>
+                        <td>Ayuda a la CONANP</td>
+                        <td>2</td>
+                        <td>$ 1,500.00</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">R-256134</th>
+                        <td>Ayuda a la CONANP</td>
+                        <td>2</td>
+                        <td>$ 1,500.00</td>
+                      </tr>
+                    </tbody>
+              </table>
+          </div>
+          </div>
+            
+        </div>
+    </div>
+
+</div>

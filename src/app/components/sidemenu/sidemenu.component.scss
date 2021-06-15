@@ -1,0 +1,70 @@
+#sidebar-wrapper {
+  max-width: 280px !important;
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+
+    background-image: url("/assets/TCB_Fondo_Color2x.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #sidebar-wrapper .sidebar-heading {
+    padding-top: 0.5rem;
+    padding-left: 0px;
+    text-align: center;
+  }
+  #sidebar-wrapper .list-group {
+    width: 15rem;
+    font-size: .9em;
+  }
+
+  .list-group-item{
+    padding-left: 45px;
+    background-color: transparent;
+    color: white;
+  }
+
+  .list-group-item, .list-group-item.active{
+    border: none;
+  }
+
+  label{
+    cursor: pointer;
+  }
+  
+  .list-group-item.active > label{
+    border-bottom: solid 3px white;
+  }
+
+  #page-content-wrapper {
+    min-width: 100vw;
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 0;
+  }
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+  }
+  @media (min-width: 768px) {
+    #sidebar-wrapper {
+      margin-left: 0;
+    }
+    #page-content-wrapper {
+      min-width: 0;
+      width: 100%;
+      padding-left: 245px !important;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+      margin-left: -15rem;
+    }
+  }

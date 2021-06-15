@@ -1,0 +1,532 @@
+.div-principal{
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+}
+
+.div-completo{
+    height: 87vh;
+}
+
+.div-auto{
+    height: auto;
+}
+
+.label-acciones{
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.btn-group > label{
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.btn-toolbar{
+    border-radius: 30px;
+    background-image: linear-gradient(-10deg, #7d52cf, #7d52cf, #7d52cf, #7d52cf, #4083ff, #4083ff, #2ce392,  #2ce392,#2ce392, #2ce392);
+}
+
+span{
+    border-radius: 30px;
+}
+
+.btn-check, .label-check3, .label-check4{
+  box-shadow: none;
+}
+
+
+.btn-check3 + .label-check3{
+    border-radius: 30px;
+    background-color: white;
+    font-size: 16px;
+    color: #2CE392 !important;
+}
+
+.btn-check3:checked + .label-check3{
+    border-radius: 30px;
+    border: none;
+    background-image: linear-gradient(-10deg, #4083ff, #4083ff,#4083ff, #2ce392, #2ce392, #2ce392, #2ce392, #2ce392);
+    color: white !important;
+}
+
+.label-check3, .label-check4{
+    border: none;
+}
+
+.label-check3:hover, .label-check4:hover{
+  text-decoration: none;
+  box-shadow:none;
+}
+
+.btn-check3:focus, .btn-check4:focus{
+    outline: 0 !important;
+}
+
+.btn-check4 + .label-check4{
+    border-radius: 30px;
+    background-color: white;
+    font-size: 16px;
+    color: #7D52CF !important;
+}
+
+.btn-check4:checked + .label-check4{
+    border-radius: 30px;
+    border: none;
+    background-image: linear-gradient(-10deg, #7d52cf, #7d52cf, #7d52cf, #7d52cf, #4083ff, #4083ff);
+    color: white !important;
+}
+
+.select-agregar{
+    float: right;
+    background-color: white;
+    width: 100%; 
+    height: 40px; 
+    line-height: 17.5px;
+    color: #7D52CF; 
+    border-radius: 23px; 
+    border: solid 2px #7D52CF;
+    font-size: 16px; 
+    font-weight: bold;
+    text-align: center;
+}
+
+.select-agregar:focus{ outline: none;}
+
+.select-agregar > option{
+    background-color: white;
+    line-height: 35px !important;
+    color: #7D52CF;
+    font-weight: bold;
+}
+
+.select-agregar > option:hover{
+    background-color: #7D52CF !important;
+    color: white !important;
+}
+
+
+.table-responsive{
+    width: 1200px;
+}
+
+thead>tr{
+    border-width: 0;
+    border: #7E7E7E;
+}
+.th-left {
+    border-color: gray;
+    border-style: solid;
+    border-top-left-radius: 10px;
+    border-width: 0;
+}
+
+.th-right {
+    border-color: gray;
+    border-style: solid;
+    border-top-right-radius: 10px;
+    border-width: 0;
+}
+
+.thead-table{
+    background-color: #7E7E7E;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    
+}
+
+tbody{
+    font-size: 10px;
+    color: #7E7E7E;
+    font-weight: 600;
+    border: #7E7E7E;
+}
+
+tbody>tr{
+    cursor: pointer;
+}
+
+tbody>tr>.td-button{
+    text-align: center;
+}
+
+.btn-flecha{
+    background-color: transparent; border: none; outline: none; float: right;
+}
+
+.flecha{
+    float: right;
+}
+
+.th-btn{
+    text-align: center;
+}
+
+
+.label-input{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.div-input{
+    height: 40px;
+    border: solid 1px #7E7E7E;
+    border-radius: 10px;
+    line-height: 40px;
+    color: #7E7E7E;
+    font-size: 10px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+input:focus {
+    border: none;
+}
+
+.div-select{
+    border-radius: 10px;
+}
+
+@media (max-width: 991.98px) {
+    .btn-table-aceptar, .btn-table-rechazar{
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .btn-table-aceptar, .btn-table-rechazar{
+        width: 80%;
+    }
+}
+
+@media (min-width: 1300px) {
+    .btn-table-aceptar, .btn-table-rechazar{
+        width: 55%;
+    }
+}
+
+.btn-table-aceptar{
+    background-color: #2CE392;
+    color: white;
+    font-weight: 600;
+    font-size: 10px;
+    border-radius: 2px;
+    line-height: 10px;
+    height: 23px;
+}
+
+.btn-table-rechazar{
+    background-color: #F74158;
+    color: white;
+    font-weight: 600;
+    font-size: 10px;
+    border-radius: 2px;
+    line-height: 10px;
+    height: 23px;
+}
+
+
+
+.btn-regresar{
+    float: right; 
+    height: 35px; 
+    width: 32%; 
+    border: solid 2px #F74158; 
+    color: #F74158; 
+    border-radius: 23px; 
+    font-size: 16px; 
+    font-weight: bold;
+    line-height: 17.5px;
+}
+
+.label-donativos{
+    font-size: 18px;
+    font-weight: 800;
+}
+
+ .container-input > .label-select{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.label-select-option{
+    font-size: 10px;
+    font-weight: 600;
+    color: gray;
+    border-radius: 10px !important;
+}
+
+.txtarea{
+    height: 118px;
+    border: solid 1px #7E7E7E;
+    border-radius: 10px;
+    color: #7E7E7E;
+    font-size: 10px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+.div-img{
+  height: 115px !important;
+    width: 115px !important;
+    border: 1px solid #7E7E7E;
+    border-radius: 10px;
+}
+
+@media (min-width: 1200px) and (max-width: 1349px) {
+  .div-img{
+    height: 105px !important;
+      width: 105px !important;
+      border: 1px solid #7E7E7E;
+      
+  }
+}
+
+.btn-file{
+    border: solid 2px #2CE392;
+    border-radius: 20px;
+    height: 35px;
+
+    font-size: 12px;
+    font-weight: bold;
+    color: #2ce392;
+
+    background-color: white;
+}
+.fileupload {
+    visibility: hidden;
+  }
+
+  .btn-eliminar-donativo{
+    border: solid 2px #7D52CF;
+    border-radius: 20px;
+    height: 35px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    color: #7D52CF;
+
+    background-color: white;
+  }
+
+
+  .btn-guardar{
+    float: right;
+    background-image: linear-gradient(120deg, #f7f369, #f7f369, #ff7248,#f74158, #f74158,#f74158, #f74158);
+    width: 100%; 
+    height: 35px; 
+    color: white; 
+    border-radius: 23px; 
+    border: none;
+    font-size: 16px; 
+    font-weight: bold;
+}
+
+
+.btn-promotor{
+    border: solid 2px #7D52CF;
+    border-radius: 20px;
+    height: 35px;
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    color: #7D52CF;
+
+    background-color: white;
+  }
+
+
+  .check-capitulos div label{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 22px;
+  }
+
+
+  input[type="checkbox"]{
+    display: none;
+  }
+
+  label input[type="checkbox"] ~ span{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    vertical-align: top;
+    border: 2px solid #7E7E7E;
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    margin-top: 3px;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+
+  label input[type="checkbox"]:checked ~ span{
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 2px #fff;
+  }
+
+  .check-social input[type="checkbox"]:checked ~ span{
+    background-color: #F8E17C;
+  }
+
+  .check-fauna input[type="checkbox"]:checked ~ span{
+    background-color: #FC734D;
+  }
+
+  .check-agua input[type="checkbox"]:checked ~ span{
+    background-color: #4083FF;
+  }
+
+  .check-legislativo input[type="checkbox"]:checked ~ span{
+    background-color: #7D52CF;
+  }
+
+  .check-tierra input[type="checkbox"]:checked ~ span{
+    background-color: #2CE392;
+  }
+
+  .check-emergencia input[type="checkbox"]:checked ~ span{
+    background-color: #F74158;
+  }
+
+
+  .select {
+    display: inline-block;
+  }
+  .select .select-field input,
+  .select .select-field label,
+  .select .select-field input:checked ~ .select-placeholder,
+  .select .radius input,
+  .select .radius label,
+  .select .radius input:checked ~ .select-placeholder {
+    display: none;
+  }
+  .select .select-field input:checked + label,
+  .select .select-field .select-placeholder,
+  .select .radius input:checked + label,
+  .select .radius .select-placeholder {
+    display: block;
+  }
+  .select .select-field label, .select .radius label{
+    border: 1px solid gray;
+    padding: 5px;
+    background: white;
+  }
+  .select .select-options {
+    animation: disable-options 0.5s;
+    opacity: 0;
+    position: absolute;
+    border: 1px solid gray;
+    background: white;
+    pointer-events: none;
+  }
+  .select .select-options label {
+    display: block;
+  }
+  .select .select-options-focus {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .select .select-options-focus:focus + * {
+    animation-name: enable-options;
+    opacity: 1;
+    pointer-events: all;
+  }
+ 
+  .select-placeholder{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+  }
+  
+  .customized-select {
+    font-family: sans-serif;
+    font-size: 0.9em;
+    position: relative;
+    margin: 3px;
+    width: 211px;
+  }
+  .customized-select label {
+    cursor: pointer;
+  }
+  .customized-select * {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  .customized-select .select-field label {
+    
+    height: 35px;
+    border: 2px solid #7D52CF;
+    border-radius: 23px;
+    
+    background-color: white;
+    font-weight: bold;
+    color: #7D52CF;
+    text-align: center;
+
+    background-image: url("/assets/caret-down.svg");
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) 50%;
+  }
+
+  .customized-select .radius label {
+    
+    height: 35px;
+    border: 2px solid #7D52CF;
+    border-bottom: none;
+    border-top-left-radius: 21px 21px; border-top-right-radius: 21px 21px;
+    
+    background-color: white;
+    font-weight: bold;
+    color: #7D52CF;
+    text-align: center;
+
+    background-image: url("/assets/caret-up.svg");
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) 50%;
+  }
+  
+  .customized-select .select-options {
+    font-family: 'Montserrat', sans-serif;
+    transition: all 200ms ease-out;
+    top: 100%;
+    left: 0;
+    min-width: 100%;
+    margin-top: 1px;
+    border: 2px solid #7D52CF;
+    border-top: none;
+    border-bottom-left-radius: 21px 21px; border-bottom-right-radius: 21px 21px;
+  }
+  .customized-select .select-options label {
+    background: white;
+    color: #7D52CF;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    margin: 0;
+    padding: 6px 10px;
+  }
+  .customized-select .select-options label:hover {
+    background: #7D52CF;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    pointer-events: all;
+    border: none;
+  }
+
+
+  .eliminar{
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: underline;
+  }

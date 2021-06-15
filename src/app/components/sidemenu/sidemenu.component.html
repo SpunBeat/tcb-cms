@@ -1,0 +1,38 @@
+<div class="d-flex" id="wrapper" style="overflow: hidden;">
+    <!-- Sidebar -->
+    <div class="position-fixed" id="sidebar-wrapper">
+      <div class="sidebar-heading my-5">
+        <img width="150" height="22" class="nombre" src="/assets/logo2.png" alt="">
+      </div>
+      <div class="list-group list-group-flush">
+        <a routerLink="/dashboard" class="list-group-item list-group-item-action" routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact:
+            true}"> <label>Dashboard</label></a>
+
+        <a routerLink="/main/usuarios" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+            true}" class="list-group-item list-group-item-action">
+          <label>Usuarios</label></a>
+
+        <a routerLink="/main/empresas"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+          true}" class="list-group-item list-group-item-action"><label>Empresas</label></a>
+
+        <a routerLink="/main/organizaciones" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+          true}" class="list-group-item list-group-item-action"> <label>Organizaciones</label></a>
+
+        <a routerLink="/main/acciones" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+          true}" class="list-group-item list-group-item-action"> <label>Acciones</label></a>
+
+        <a routerLink="/main/recompensas" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+          true}" class="list-group-item list-group-item-action"> <label>Recompensas</label></a>
+
+        <a routerLink="/main/copy" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+          true}" class="list-group-item list-group-item-action"><label>Copy</label></a>
+
+        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+          true}" class="list-group-item list-group-item-action mt-5" [routerLink]="'/login'"><label>Log out</label></a>
+
+      </div>
+    </div>
+    <div id="page-content-wrapper">
+      <router-outlet></router-outlet>
+    </div>

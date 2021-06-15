@@ -1,0 +1,46 @@
+.modal-header{
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+
+    padding: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.modal-footer{
+    border-top: none;
+}
+
+.modal-body{
+    display: flex;
+    justify-content: center;
+}
+
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+    button{
+        margin-top: 20px;
+        border-radius: 30px;
+
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        padding: 8px;
+    }
+    
+  
+}
+  .delete{
+        width: 300px;
+        background-image: linear-gradient(to right, red , #7D52CF);
+        border:none;
+        color: white;
+    }
+
+    .cancel{
+        border:3px solid #875fd4;
+        color: #875fd4;
+        background-color: white;
+    }

@@ -1,0 +1,75 @@
+.login-container{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    background-image: url("/assets/backgroung.svg");
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input-container{
+    width: 300px;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    position: absolute;
+    top: 20%;
+    input{
+        margin-top: 1rem;
+        padding: 10px;
+        width: 100%;
+
+        border-radius: 8px;
+        border: none;
+        background-color: rgba(white, 0.6);
+        color: white;
+
+        font-size: 14px;
+    }
+
+    input:focus{
+        outline: none;
+        border: none;
+    }
+
+    ::placeholder{
+        color: white;
+        font-size: 10px;
+        font-size: 14px;
+    }
+
+    span{
+        font-size: 12px;
+        display: flex;
+        color: white;
+        justify-content: flex-end;
+        margin-top: 5px;
+    }
+}
+
+img{
+    margin-bottom: 4rem;
+    align-self: center;
+    
+}
+
+h3{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+button{
+    margin-top: 8rem;
+    width: 100%;
+    border: none;
+    background-color: white;
+    font-size: 12px;
+    border-radius: 100px;
+    padding: 7px;
+    font-weight: bold;
+}
