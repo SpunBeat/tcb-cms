@@ -29,7 +29,7 @@
           true}" class="list-group-item list-group-item-action"><label>Copy</label></a>
 
         <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-          true}" class="list-group-item list-group-item-action mt-5" [routerLink]="'/login'"><label>Log out</label></a>
+          true}" class="list-group-item list-group-item-action mt-5" (click)="logOut()"><label>Log out</label></a>
 
       </div>
     </div>

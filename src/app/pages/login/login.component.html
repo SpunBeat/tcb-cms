@@ -1,14 +1,23 @@
 <div class="login-container">
-    <div class="input-container">
+    <form class="input-container" [formGroup]="authForm" (ngSubmit)="logIn()">
         <img src="assets/logo2.png" alt="logo" width="300" height="40">
         <h3>Iniciar sesión</h3>
 
-        <input type="text" placeholder="Usuario">
+        <input type="text" placeholder="Usuario" formControlName="username">
 
-        <input type="password" placeholder="Contraseña">
+        <input type="password" placeholder="Contraseña" formControlName="password">
         <div>
         <span>Olvidé mi contraseña</span>
         </div>
-        <button [routerLink]='"/main/dashboard"'>Iniciar sesión</button>
-    </div>
+
+          <!-- * Continue -->
+          <button type="submit" [disabled]="loading">
+            <p class="mb-0" *ngIf="!loading;else loader">Iniciar Sesión</p>
+            <ng-template #loader>
+              <div class="spinner-grow spinner-grow-sm" role="status">
+                <span class="sr-only mb-0"></span>
+              </div>
+            </ng-template>
+          </button>
+      </form>
 </div>
