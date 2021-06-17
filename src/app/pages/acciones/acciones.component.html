@@ -777,17 +777,17 @@
 
               <div class="container-input mt-3">
                 <label class="label-input">Dirección de acción</label>
-                <input type="text" class="d-block w-100 div-input" id="incolores" name="colores" placeholder="País">
-                <input type="text" class="d-block w-100 mt-2 div-input" id="incolores" name="colores"
+                <input type="text" class="d-block w-100 div-input"  name="colores" placeholder="País">
+                <input type="text" class="d-block w-100 mt-2 div-input"  name="colores"
                   placeholder="Estado">
-                <input type="text" class="d-block w-100 mt-2 div-input" id="incolores" name="colores"
+                <input type="text" class="d-block w-100 mt-2 div-input"  name="colores"
                   placeholder="C.P.">
               </div>
 
               <div class="container-input mt-3">
                 <label class="label-input">Apadrinamiento</label>
-                <input type="text" class="d-block w-100 div-input" id="incolores" name="colores" placeholder="Promotor">
-                <input type="text" class="d-block w-100 mt-2 div-input" id="incolores" name="colores"
+                <input type="text" class="d-block w-100 div-input"  name="colores" placeholder="Promotor">
+                <input type="text" class="d-block w-100 mt-2 div-input"  name="colores"
                   placeholder="Temporalidad">
               </div>
 
@@ -1072,8 +1072,9 @@
 
 
 
+      <!-- * Acciones -->
 
-      <div *ngIf="flagOpcSelect==2" class="row justify-content-center mt-3">
+      <form *ngIf="flagOpcSelect==2" class="row justify-content-center mt-3" [formGroup]="accionGenericaGroup">
         <div class="col-12">
           <div class="row mb-4 mt-5 justify-content-center">
             <div class="col-10 col-md-12">
@@ -1115,7 +1116,7 @@
 
               <div class="container-input mt-3">
                 <label class="label-select d-block p-0">Tipo</label>
-                <select class="label-select-option w-100" style="height: 40px;">
+                <select class="label-select-option w-100" style="height: 40px;" formControlName="name">
                   <option value="0">Elegir tipo</option>
                   <option value="1">Mondotondo</option>
                   <option value="2">Mondotondo</option>
@@ -1126,7 +1127,6 @@
 
               <div class="container-input mt-3">
                 <label class="label-input">Capítulos</label>
-                <form action="#" class="mt-1">
                   <div class="row check-capitulos">
                     <div class="col-6 col-md-12 col-xl-6">
                       <label class="d-block mb-1 check-social"><input type="checkbox" name="" value="" />
@@ -1161,24 +1161,22 @@
                       </label>
                     </div>
                   </div>
-
-                </form>
               </div>
 
               <div class="container-input mt-3">
                 <label class="label-input">Colores</label>
                 <input type="text" class="d-block w-100 div-input" id="incoloresacciones" name="coloresacciones"
-                  placeholder="Mondotondo">
+                  placeholder="Mondotondo" formControlName="colors">
               </div>
 
               <div class="container-input mt-3">
                 <label class="label-input">Dirección de acción</label>
                 <input type="text" class="d-block w-100 div-input" id="inpaisacciones" name="paisacciones"
-                  placeholder="País">
+                  placeholder="País" formControlName="country">
                 <input type="text" class="d-block w-100 mt-2 div-input" id="inestadoacciones" name="estadoacciones"
-                  placeholder="Estado">
+                  placeholder="Estado" formControlName="state">
                 <input type="text" class="d-block w-100 mt-2 div-input" id="incpacciones" name="cpacciones"
-                  placeholder="C.P.">
+                  placeholder="C.P." formControlName="zipcode">
               </div>
 
             </div>
@@ -1189,12 +1187,12 @@
               <div class="container-input">
                 <label class="label-input">Nombre</label>
                 <input type="text" class="d-block w-100 div-input" id="innombreacciones" name="nombreacciones"
-                  placeholder="contraseña">
+                  placeholder="contraseña" formControlName="name">
               </div>
 
               <div class="container-input mt-3">
                 <label class="label-input mb-2">Descripción</label>
-                <textarea class="form-control d-block w-100 txtarea" id="FormControlTextarea1"
+                <textarea class="form-control d-block w-100 txtarea" id="FormControlTextarea1" formControlName="description"
                   placeholder="Creamos soluciones empleando herramientas de comunicación y tecnología para transparentar de forma clara y contextualizada cualquier tipo de información en posesión de organizaciones públicas, privadas o con fines sociales. Contamos con distintos servicios para mejorar la percepción de las organizaciones."
                   rows="3"></textarea>
               </div>
@@ -1216,7 +1214,7 @@
 
                     <label class="btn btn-file d-block align-self-end position-absolute" style="width: 89%; bottom: 0;"
                       for="fileupload">Cargar archivo</label>
-                    <input class="fileupload" id="fileupload" type="file" />
+                    <input class="fileupload" id="fileupload" type="file" formControlName="image" (change)="onFileChange($event,image)" />
                   </div>
 
                 </div>
@@ -1224,10 +1222,12 @@
 
               <div class="container-input mt-3">
                 <label class="label-input">Apadrinamiento</label>
+
                 <input type="text" class="d-block w-100 div-input" id="inapadrinamientoacciones"
-                  name="apadrinamientoacciones" placeholder="Promotor">
+                  name="apadrinamientoacciones" placeholder="Promotor" formControlName="promotorId">
+
                 <input type="text" class="d-block w-100 mt-2 div-input" id="intemporalidadacciones"
-                  name="temporalidadacciones" placeholder="Temporalidad">
+                  name="temporalidadacciones" placeholder="Temporalidad" formControlName="temporality">
               </div>
 
 
@@ -1241,31 +1241,33 @@
               <div class="container-input">
                 <label class="label-input">Impacto</label>
                 <input type="text" class="d-block w-100 div-input" id="inimpactoacciones" name="impactoacciones"
-                  placeholder="Banco">
+                  placeholder="Banco" formControlName="impact">
               </div>
 
               <div class="container-input mt-3">
                 <label class="label-input">CO2 ahorrado</label>
                 <input type="text" class="d-block w-100 div-input" id="inco2acciones" name="co2acciones"
-                  placeholder="7.23 ton CO2 equivalente.">
+                  placeholder="7.23 ton CO2 equivalente." formControlName="co_dos_saved">
               </div>
 
               <div class="container-input mt-3">
                 <label class="label-input">Litros de agua ahorrados</label>
                 <input type="text" class="d-block w-100 div-input" id="inaguaacciones" name="aguaacciones"
-                  placeholder="36,500 L de agua">
+                  placeholder="36,500 L de agua" formControlName="liters_saved">
+
               </div>
 
 
               <div class="container-input mt-3">
                 <label class="label-input">Veces tomada</label>
+                <!-- * Falta en api -->
                 <input type="text" class="d-block w-100 div-input" id="invecesacciones" name="vecesacciones"
                   placeholder="34,000 veces">
               </div>
 
               <div class="container-input mt-3">
                 <label class="label-select d-block p-0">Recurrencia</label>
-                <select class="label-select-option w-100" style="height: 40px;">
+                <select class="label-select-option w-100" style="height: 40px;" formControlName="recurrency">
                   <option value="0">Elegir recurrencia</option>
                   <option value="1">País</option>
                   <option value="2">País</option>
@@ -1276,7 +1278,7 @@
 
               <div class="container-input mt-3">
                 <label class="label-select d-block p-0">Alcance</label>
-                <select class="label-select-option w-100" style="height: 40px;">
+                <select class="label-select-option w-100" style="height: 40px;" formControlName="scope">
                   <option value="0">Elegir alcance</option>
                   <option value="1">Nacional</option>
                   <option value="2">Nacional</option>
@@ -1288,7 +1290,7 @@
               <div class="container-input mt-3">
                 <label class="label-input">Fecha de vigencia</label>
                 <input type="text" class="d-block w-100 div-input" id="invigenciaacciones" name="vigenciaacciones"
-                  placeholder="27 - Septiembre - 2023">
+                  placeholder="27 - Septiembre - 2023" formControlName="end_date">
               </div>
 
 
@@ -1298,42 +1300,43 @@
               <div class="row">
                 <div class="container-input mt-6 col-8">
                   <label class="label-input">Comparte</label>
-  
+
                   <input type="text" class="d-block w-100 div-input" id="incomparteacciones" name="comparteacciones"
-                    placeholder="Texto">
-  
+                    placeholder="Texto" formControlName="share">
+
                   <div class="row align-items-end mt-2">
                     <div class="col-12 col-xl-5">
                       <div class="div-img">
                         <label class="label-alt">Imagen.png</label>
                         <!-- <img class="img-preview img-fluid" src="" alt="archivo"> -->
                       </div>
-  
+
                     </div>
-  
+
                     <div class="col-12 col-xl-7 align-self-end mt-3">
                       <button class="btn-file w-100 mb-4 mt-2 mt-xl-0">Eliminar imagen</button>
                       <div class='w-100'>
                          <label class="btn btn-file d-block align-self-end"
                         style="width: 100%; bottom: 0;" for="fileupload">Cargar imagen</label>
                       </div>
-  
-                     
-                      <input class="fileupload" id="fileupload" type="file" />
+
+
+                      <input class="fileupload" id="fileupload" type="file" formControlName="share_image" (change)="onFileChange($event,share_image)"  />
                     </div>
-  
+
                   </div>
                 </div>
                 <div class="col-4">
-  
+
                   <div class="container-input mt-3">
                     <label class="label-input">Ejemplo de verificación</label>
                     <input type="text" class="d-block w-100 div-input" id="inverificacionacciones"
-                      name="verificacionacciones" placeholder="Ejemplo de verificación">
+                      name="verificacionacciones" placeholder="Ejemplo de verificación" formControlName="verification">
                   </div>
-  
+
                   <div class="container-input mt-3">
                     <label class="label-input">Link para firma</label>
+                    <!-- * Falta en api -->
                     <input type="text" class="d-block w-100 div-input" id="infirmaacciones" name="firmaacciones"
                       placeholder="Link para firma">
                   </div>
@@ -1362,18 +1365,18 @@
                     <div class="col-4">
                       <div class="form-group">
                         <label style="color: transparent;">.</label>
-                        <input type="text" class="d-block w-100 div-input" id="inlinkpromotoracciones"
-                          name="linkpromotoracciones" placeholder="Link externo">
+                        <input type="text" class="d-block w-100 div-input" id="linkpromotor"
+                          name="linkpromotor" placeholder="Link externo">
                       </div>
                     </div>
                     <div class="col-4">
                       <div class="form-group">
                         <label class='label-input'>Nombre del producto</label>
-                        <input type="text" class="d-block w-100 div-input" id="inlinkpromotoracciones"
-                          name="linkpromotoracciones" placeholder="Link externo">
+                        <input type="text" class="d-block w-100 div-input" id="nombreproducto"
+                          name="nombreproducto" placeholder="Link externo">
                       </div>
                     </div>
-  
+
                   </div>
                   <div class="row mt-2">
                     <div class="col-5">
@@ -1391,7 +1394,7 @@
                 </div>
               </div>
 
-        
+
 
             </div>
 
@@ -1412,7 +1415,7 @@
                 </div>
 
                 <div class="col-6 col-lg-4">
-                  <button class="bg-transparent btn-guardar">Guardar</button>
+                  <button (click)="crearAccion()" class="bg-transparent btn-guardar">Guardar</button>
                 </div>
               </div>
             </div>
@@ -1519,7 +1522,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </form>
 
 
 

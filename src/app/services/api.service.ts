@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { switchMap } from 'rxjs/operators';
+import { map, switchMap } from 'rxjs/operators';
 import { throwError, of } from 'rxjs';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
-import { LoginResponse } from 'src/app/api.interfaces';
+import { LoginResponse, MetaResponse } from 'src/app/api.interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -30,5 +30,9 @@ export class ApiService {
         return of({ token });
       })
     );
+  }
+
+  createAction(formdata:FormData){
+    return this.http.post(`${environment.api}/action/register`, formdata)
   }
 }

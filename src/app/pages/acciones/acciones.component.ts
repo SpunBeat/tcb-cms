@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , OnDestroy} from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Subject } from 'rxjs';
+import { take, takeUntil } from 'rxjs/operators';
+import { ApiService } from 'src/app/services/api.service';
 import { ModalService } from 'src/app/services/modal.service';
 
 @Component({
@@ -6,7 +10,7 @@ import { ModalService } from 'src/app/services/modal.service';
   templateUrl: './acciones.component.html',
   styleUrls: ['./acciones.component.scss']
 })
-export class AccionesComponent implements OnInit {
+export class AccionesComponent implements OnInit, OnDestroy {
 
   flagHeight:boolean=false;
   flagMostrar:boolean=false;
@@ -18,13 +22,48 @@ export class AccionesComponent implements OnInit {
   flagSelect:boolean=false;
   flag:boolean=false;
 
+  killall = new Subject()
+
+  accionGenericaGroup:FormGroup
+
   public promotores:Array<number>=[1];
 
 
-  constructor(public modalService:ModalService) { }
+  constructor(public modalService:ModalService, private fb: FormBuilder, private api: ApiService) {
+    this.accionGenericaGroup = this.fb.group({
+      name:[''],
+      type:[''],
+      description:[''],
+      chapters:[''],
+      amount_goal:[''],
+      colors:[''],
+      end_date:[''],
+      recurrency:[''],
+      scope:[''],
+      promotorId:[''],
+      temporality:[''],
+      country:[''],
+      state:[''],
+      zipcode:[''],
+      image:[null],
+      impact:[''],
+      co_dos_saved:[''],
+      liters_saved:[''],
+      verification:[''],
+      share:[''],
+      share_image:[null]
+    })
+  }
 
   ngOnInit(): void {
   }
+
+  ngOnDestroy(){
+    this.killall.next();
+    this.killall.complete();
+  }
+
+
   eliminarAccion(): void {
     this.modalService.toggleModal('modal-dashboard');
   }
@@ -76,5 +115,47 @@ export class AccionesComponent implements OnInit {
 
   eliminarPromotor(index:number){
     this.promotores.splice(index,1);
+  }
+
+  crearAccion(){
+
+    this.api.createAction(this.createFormData(this.accionGenericaGroup.value)).pipe(
+      take(1),
+      takeUntil(this.killall)
+    ).subscribe({
+      next: response =>{
+        console.log(response);
+
+      },
+      error : err => {
+        console.log(err);
+
+      }
+    })
+
+  }
+
+  createFormData(payload: any): FormData {
+    const formData = new FormData();
+    for (const [key, value] of Object.entries(payload)) {
+      if (value && key !== 'username' && key !== 'email') {
+        formData.append(key, value as string);
+      }
+    }
+    return formData;
+  }
+
+  onFileChange(event:any,input:string) {
+
+    if (event.target.files.length > 0) {
+      const file = event.target.files[0];
+     input === 'image' ?
+     this.accionGenericaGroup.patchValue({
+        image: file
+      }) :
+      this.accionGenericaGroup.patchValue({
+        share_image: file
+      })
+    }
   }
 }
