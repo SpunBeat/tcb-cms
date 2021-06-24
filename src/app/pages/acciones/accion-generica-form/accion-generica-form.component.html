@@ -1,0 +1,319 @@
+
+      <form  [formGroup]="accionGenericaGroup">
+        <div class="row mt-4 mb-3 justify-content-evenly justify-content-lg-center">
+          <div class="col-10 col-md-5 col-lg-4">
+
+            <div class="container-input">
+              <label class="label-input">ID</label>
+              <input type="text" class="d-block w-100 div-input" id="inidacciones" name="idacciones"
+                placeholder="256134">
+            </div>
+
+            <div class="container-input mt-3">
+              <label class="label-select d-block p-0">Tipo</label>
+              <select class="label-select-option w-100" style="height: 40px;" formControlName="name">
+                <option value="0">Elegir tipo</option>
+                <option value="1">Mondotondo</option>
+                <option value="2">Mondotondo</option>
+                <option value="3">Mondotondo</option>
+                <option value="4">Mondotondo</option>
+              </select>
+            </div>
+
+            <div class="container-input mt-3">
+              <label class="label-input">Capítulos</label>
+                <div class="row check-capitulos">
+                  <div class="col-6 col-md-12 col-xl-6">
+                    <label class="d-block mb-1 check-social"><input type="checkbox" name="" value="" />
+                      <span></span>
+                      Social
+                    </label>
+
+                    <label class="d-block mb-1 check-fauna"><input type="checkbox" name="" value="" />
+                      <span></span>
+                      Fauna
+                    </label>
+
+                    <label class="d-block check-agua"><input type="checkbox" name="" value="" />
+                      <span></span>
+                      Agua
+                    </label>
+                  </div>
+                  <div class="col-6 col-md-12 col-xl-6">
+                    <label class="d-block mb-1 check-legislativo"><input type="checkbox" name="" value="" />
+                      <span></span>
+                      Legislativo
+                    </label>
+
+                    <label class="d-block mb-1 check-tierra"><input type="checkbox" name="" value="" />
+                      <span></span>
+                      Tierra
+                    </label>
+
+                    <label class="d-block mb-1 check-emergencia"><input type="checkbox" name="" value="" />
+                      <span></span>
+                      Emergencia
+                    </label>
+                  </div>
+                </div>
+            </div>
+
+            <div class="container-input mt-3">
+              <label class="label-input">Colores</label>
+              <input type="text" class="d-block w-100 div-input" id="incoloresacciones" name="coloresacciones"
+                placeholder="Mondotondo" formControlName="colors">
+            </div>
+
+            <div class="container-input mt-3">
+              <label class="label-input">Dirección de acción</label>
+              <input type="text" class="d-block w-100 div-input" id="inpaisacciones" name="paisacciones"
+                placeholder="País" formControlName="country">
+              <input type="text" class="d-block w-100 mt-2 div-input" id="inestadoacciones" name="estadoacciones"
+                placeholder="Estado" formControlName="state">
+              <input type="text" class="d-block w-100 mt-2 div-input" id="incpacciones" name="cpacciones"
+                placeholder="C.P." formControlName="zipcode">
+            </div>
+
+          </div>
+
+
+          <div class="col-10 col-md-5 col-lg-4">
+
+            <div class="container-input">
+              <label class="label-input">Nombre</label>
+              <input type="text" class="d-block w-100 div-input" id="innombreacciones" name="nombreacciones"
+                placeholder="contraseña" formControlName="name">
+            </div>
+
+            <div class="container-input mt-3">
+              <label class="label-input mb-2">Descripción</label>
+              <textarea class="form-control d-block w-100 txtarea" id="FormControlTextarea1" formControlName="description"
+                placeholder="Creamos soluciones empleando herramientas de comunicación y tecnología para transparentar de forma clara y contextualizada cualquier tipo de información en posesión de organizaciones públicas, privadas o con fines sociales. Contamos con distintos servicios para mejorar la percepción de las organizaciones."
+                rows="3"></textarea>
+            </div>
+
+            <div class="container-input mt-3">
+              <label class="label-input">Imagen</label>
+
+              <div class="row">
+                <div class="col-12 col-xl-5">
+                  <div class="div-img">
+                    <label class="label-alt">Imagen.png</label>
+                    <!-- <img class="img-preview img-fluid" src="" alt="archivo"> -->
+                  </div>
+
+                </div>
+
+                <div class="col-12 col-xl-7 align-self-end position-relative">
+                  <button class="btn-file w-100 mb-4 mt-2 mt-xl-0">Eliminar archivo</button>
+
+                  <label class="btn btn-file d-block align-self-end position-absolute" style="width: 89%; bottom: 0;"
+                    for="fileupload">Cargar archivo</label>
+                  <input class="fileupload" id="fileupload" type="file" name="image" formControlName="image" (change)="onFileChange($event)" />
+                </div>
+
+              </div>
+            </div>
+
+            <div class="container-input mt-3">
+              <label class="label-input">Apadrinamiento</label>
+
+              <input type="text" class="d-block w-100 div-input" id="inapadrinamientoacciones"
+                name="apadrinamientoacciones" placeholder="Promotor" formControlName="promotorId">
+
+              <input type="text" class="d-block w-100 mt-2 div-input" id="intemporalidadacciones"
+                name="temporalidadacciones" placeholder="Temporalidad" formControlName="temporality">
+            </div>
+
+
+
+
+          </div>
+
+
+          <div class="col-10 col-md-5 col-lg-4 mt-4 mt-lg-0">
+
+            <div class="container-input">
+              <label class="label-input">Impacto</label>
+              <input type="text" class="d-block w-100 div-input" id="inimpactoacciones" name="impactoacciones"
+                placeholder="Banco" formControlName="impact">
+            </div>
+
+            <div class="container-input mt-3">
+              <label class="label-input">CO2 ahorrado</label>
+              <input type="text" class="d-block w-100 div-input" id="inco2acciones" name="co2acciones"
+                placeholder="7.23 ton CO2 equivalente." formControlName="co_dos_saved">
+            </div>
+
+            <div class="container-input mt-3">
+              <label class="label-input">Litros de agua ahorrados</label>
+              <input type="text" class="d-block w-100 div-input" id="inaguaacciones" name="aguaacciones"
+                placeholder="36,500 L de agua" formControlName="liters_saved">
+
+            </div>
+
+
+            <div class="container-input mt-3">
+              <label class="label-input">Veces tomada</label>
+              <!-- * Falta en api -->
+              <input type="text" class="d-block w-100 div-input" id="invecesacciones" name="vecesacciones"
+                placeholder="34,000 veces">
+            </div>
+
+            <div class="container-input mt-3">
+              <label class="label-select d-block p-0">Recurrencia</label>
+              <select class="label-select-option w-100" style="height: 40px;" formControlName="recurrency">
+                <option value="0">Elegir recurrencia</option>
+                <option value="1">País</option>
+                <option value="2">País</option>
+                <option value="3">País</option>
+                <option value="4">País</option>
+              </select>
+            </div>
+
+            <div class="container-input mt-3">
+              <label class="label-select d-block p-0">Alcance</label>
+              <select class="label-select-option w-100" style="height: 40px;" formControlName="scope">
+                <option value="0">Elegir alcance</option>
+                <option value="1">Nacional</option>
+                <option value="2">Nacional</option>
+                <option value="3">Nacional</option>
+                <option value="4">Nacional</option>
+              </select>
+            </div>
+
+            <div class="container-input mt-3">
+              <label class="label-input">Fecha de vigencia</label>
+              <input type="text" class="d-block w-100 div-input" id="invigenciaacciones" name="vigenciaacciones"
+                placeholder="27 - Septiembre - 2023" formControlName="end_date">
+            </div>
+
+
+
+          </div>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="container-input mt-6 col-8">
+                <label class="label-input">Comparte</label>
+
+                <input type="text" class="d-block w-100 div-input" id="incomparteacciones" name="comparteacciones"
+                  placeholder="Texto" formControlName="share">
+
+                <div class="row align-items-end mt-2">
+                  <div class="col-12 col-xl-5">
+                    <div class="div-img">
+                      <label class="label-alt">Imagen.png</label>
+                      <!-- <img class="img-preview img-fluid" src="" alt="archivo"> -->
+                    </div>
+
+                  </div>
+
+                  <div class="col-12 col-xl-7 align-self-end mt-3">
+                    <button class="btn-file w-100 mb-4 mt-2 mt-xl-0">Eliminar imagen</button>
+                    <div class='w-100'>
+                       <label class="btn btn-file d-block align-self-end"
+                      style="width: 100%; bottom: 0;" for="fileupload">Cargar imagen</label>
+                    </div>
+
+
+                    <input class="fileupload" id="fileupload" type="file" formControlName="share_image" (change)="onFileChange($event)"  />
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-4">
+
+                <div class="container-input mt-3">
+                  <label class="label-input">Ejemplo de verificación</label>
+                  <input type="text" class="d-block w-100 div-input" id="inverificacionacciones"
+                    name="verificacionacciones" placeholder="Ejemplo de verificación" formControlName="verification">
+                </div>
+
+                <div class="container-input mt-3">
+                  <label class="label-input">Link para firma</label>
+                  <!-- * Falta en api -->
+                  <input type="text" class="d-block w-100 div-input" id="infirmaacciones" name="firmaacciones"
+                    placeholder="Link para firma">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-input mt-3" *ngFor="let promotor of promotores let i = index">
+
+            <div class="row">
+              <div class="col-3">
+                <div class="div-img mt-2">
+                  <label class="label-alt">Foto de producto</label>
+                  <!-- <img class="img-preview img-fluid" src="" alt="archivo"> -->
+                </div>
+              </div>
+              <div class="col-9">
+                <div class="row">
+                  <div class="col-4">
+                    <div class="form-group">
+                      <label class="label-input">Promotor</label>
+                      <input type="text" class="d-block w-100 div-input" id="inpromotoracciones"
+                        name="promotoracciones" placeholder="Nombre">
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-group">
+                      <label style="color: transparent;">.</label>
+                      <input type="text" class="d-block w-100 div-input" id="linkpromotor"
+                        name="linkpromotor" placeholder="Link externo">
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-group">
+                      <label class='label-input'>Nombre del producto</label>
+                      <input type="text" class="d-block w-100 div-input" id="nombreproducto"
+                        name="nombreproducto" placeholder="Link externo">
+                    </div>
+                  </div>
+
+                </div>
+                <div class="row mt-2">
+                  <div class="col-5">
+                    <button class="btn-file w-100 mb-4 mt-2 mt-xl-0">Eliminar imagen</button>
+                  </div>
+                  <div class="col-5">
+
+                    <label class="btn btn-file " style="width:100%; bottom: 0;" for="fileupload">Cargar imagen</label>
+                    <input class="fileupload" id="fileupload" type="file" />
+                  </div>
+                  <div class="col-2">
+                    <a role="button" class="eliminar" (click)="eliminarPromotor(i)" *ngIf="i!=0">Eliminar</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+          <div class="container-input mt-2">
+            <div class="row">
+
+
+              <div class="col-4">
+                <button class="btn-promotor mt-3" (click)="agregarPromotores()">Agregar promotor</button>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-10 col-md-12 my-5">
+            <div class="row justify-content-end mt-4">
+              <div class="col-6 col-lg-4">
+                <button (click)="eliminarAccion()" class="btn-eliminar-donativo">Eliminar acción</button>
+              </div>
+
+              <div *ngIf="actionDetail" class="col-6 col-lg-4">
+                <button (click)="crearAccion()" class="bg-transparent btn-guardar">Guardar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </form>

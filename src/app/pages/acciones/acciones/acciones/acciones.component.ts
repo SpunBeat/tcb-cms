@@ -4,7 +4,8 @@ import { Subject } from 'rxjs';
 import { take, takeUntil } from 'rxjs/operators';
 import { ApiService } from 'src/app/services/api.service';
 import { ModalService } from 'src/app/services/modal.service';
-
+import { ActiveActionDetail }  from 'src/app/api.interfaces'
+import { ActionsService } from 'src/app/services/actions.service';
 @Component({
   selector: 'app-acciones',
   templateUrl: './acciones.component.html',
@@ -23,13 +24,13 @@ export class AccionesComponent implements OnInit, OnDestroy {
   flag:boolean=false;
 
   killall = new Subject()
-
+  allActions:ActiveActionDetail[] = []
   accionGenericaGroup:FormGroup
 
   public promotores:Array<number>=[1];
 
 
-  constructor(public modalService:ModalService, private fb: FormBuilder, private api: ApiService) {
+  constructor(public modalService:ModalService, private fb: FormBuilder, private actionsService: ActionsService) {
     this.accionGenericaGroup = this.fb.group({
       name:[''],
       type:[''],
@@ -56,6 +57,14 @@ export class AccionesComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+
+    this.actionsService.loadActions().pipe(
+      take(1)
+    ).subscribe((actions) => {
+      this.allActions = actions;
+      console.log(this.allActions);
+
+    })
   }
 
   ngOnDestroy(){
@@ -119,7 +128,7 @@ export class AccionesComponent implements OnInit, OnDestroy {
 
   crearAccion(){
 
-    this.api.createAction(this.createFormData(this.accionGenericaGroup.value)).pipe(
+    this.actionsService.createAction(this.createFormData(this.accionGenericaGroup.value)).pipe(
       take(1),
       takeUntil(this.killall)
     ).subscribe({

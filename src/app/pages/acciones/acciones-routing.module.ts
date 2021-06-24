@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { AccionesComponent } from './acciones.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AccionesComponent } from './acciones/acciones/acciones.component';
 
 const routes: Routes = [
   {

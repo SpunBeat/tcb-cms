@@ -71,132 +71,45 @@
               <tr>
                 <th scope="col" class="th-left">ID
                   <button class="btn-flecha">
-                    <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957"
-                      viewBox="0 0 10.351 5.957">
-                      <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
-                        <path id="Trazado_479" data-name="Trazado 479"
-                          d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)"
-                          fill="#fff" />
-                        <path id="Trazado_480" data-name="Trazado 480"
-                          d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)"
-                          fill="#fff" />
-                      </g>
-                    </svg>
+                    <img src="assets/flecha.svg">
                   </button>
                 </th>
                 <th scope="col">Nombre
                   <button class="btn-flecha">
-                    <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957"
-                      viewBox="0 0 10.351 5.957">
-                      <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
-                        <path id="Trazado_479" data-name="Trazado 479"
-                          d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)"
-                          fill="#fff" />
-                        <path id="Trazado_480" data-name="Trazado 480"
-                          d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)"
-                          fill="#fff" />
-                      </g>
-                    </svg>
+                    <img src="assets/flecha.svg">
                   </button>
                 </th>
 
                 <th scope="col">Tipo
                   <button class="btn-flecha">
-                    <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957"
-                      viewBox="0 0 10.351 5.957">
-                      <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
-                        <path id="Trazado_479" data-name="Trazado 479"
-                          d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)"
-                          fill="#fff" />
-                        <path id="Trazado_480" data-name="Trazado 480"
-                          d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)"
-                          fill="#fff" />
-                      </g>
-                    </svg>
+                    <img src="assets/flecha.svg">
                   </button>
                 </th>
 
                 <th scope="col">Capítulo
                   <button class="btn-flecha">
-                    <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957"
-                      viewBox="0 0 10.351 5.957">
-                      <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
-                        <path id="Trazado_479" data-name="Trazado 479"
-                          d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)"
-                          fill="#fff" />
-                        <path id="Trazado_480" data-name="Trazado 480"
-                          d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)"
-                          fill="#fff" />
-                      </g>
-                    </svg>
+                    <img src="assets/flecha.svg">
                   </button>
                 </th>
 
                 <th scope="col" class="th-right">Alcance
                   <button class="btn-flecha">
-                    <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957"
-                      viewBox="0 0 10.351 5.957">
-                      <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
-                        <path id="Trazado_479" data-name="Trazado 479"
-                          d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)"
-                          fill="#fff" />
-                        <path id="Trazado_480" data-name="Trazado 480"
-                          d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)"
-                          fill="#fff" />
-                      </g>
-                    </svg>
+                    <img src="assets/flecha.svg">
                   </button>
                 </th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">U-256134</th>
-                <td>Báñate en dos canciones</td>
-                <td>Hazlo tú mismo</td>
-                <td>Legislativo</td>
-                <td>Nacional</td>
+              <tr *ngFor="let action of allActions">
+                <th scope="row">{{action.id}}</th>
+                <td>{{action.name}}</td>
+                <td>{{action.type}}</td>
+                <td>
+                  <p *ngFor="let chapter of action.chapters">{{chapter}}</p>
+                </td>
+                <td>{{action.scope}}</td>
               </tr>
 
-              <tr>
-                <th scope="row">U-256134</th>
-                <td>Báñate en dos canciones</td>
-                <td>Hazlo tú mismo</td>
-                <td>Legislativo</td>
-                <td>Nacional</td>
-              </tr>
-
-              <tr>
-                <th scope="row">U-256134</th>
-                <td>Báñate en dos canciones</td>
-                <td>Hazlo tú mismo</td>
-                <td>Legislativo</td>
-                <td>Nacional</td>
-              </tr>
-
-              <tr>
-                <th scope="row">U-256134</th>
-                <td>Báñate en dos canciones</td>
-                <td>Hazlo tú mismo</td>
-                <td>Legislativo</td>
-                <td>Nacional</td>
-              </tr>
-
-              <tr>
-                <th scope="row">U-256134</th>
-                <td>Báñate en dos canciones</td>
-                <td>Hazlo tú mismo</td>
-                <td>Legislativo</td>
-                <td>Nacional</td>
-              </tr>
-
-              <tr>
-                <th scope="row">U-256134</th>
-                <td>Báñate en dos canciones</td>
-                <td>Hazlo tú mismo</td>
-                <td>Legislativo</td>
-                <td>Nacional</td>
-              </tr>
             </tbody>
           </table>
         </div>
@@ -665,6 +578,7 @@
             </div>
           </div>
 
+          <!-- * Donativo form -->
           <div *ngIf="flagOpcSelect==1 && !flagOpcDonativos"
             class="row mt-4 mb-3 justify-content-evenly justify-content-lg-center">
             <div class="col-10 col-md-5 col-lg-4">
@@ -944,7 +858,7 @@
 
           </div>
 
-
+          <!-- * Donativo table -->
           <div *ngIf="flagOpcDonativos" class="row justify-content-center mt-4">
             <div class="table-responsive">
               <table class="table table-bordered table-hover">
@@ -952,64 +866,24 @@
                   <tr>
                     <th scope="col" class="th-left">ID
                       <button class="btn-flecha">
-                        <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957"
-                          viewBox="0 0 10.351 5.957">
-                          <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
-                            <path id="Trazado_479" data-name="Trazado 479"
-                              d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)"
-                              fill="#fff" />
-                            <path id="Trazado_480" data-name="Trazado 480"
-                              d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)"
-                              fill="#fff" />
-                          </g>
-                        </svg>
+                        <img src="assets/flecha.svg">
                       </button>
                     </th>
                     <th scope="col">Usuario
                       <button class="btn-flecha">
-                        <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957"
-                          viewBox="0 0 10.351 5.957">
-                          <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
-                            <path id="Trazado_479" data-name="Trazado 479"
-                              d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)"
-                              fill="#fff" />
-                            <path id="Trazado_480" data-name="Trazado 480"
-                              d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)"
-                              fill="#fff" />
-                          </g>
-                        </svg>
+                        <img src="assets/flecha.svg">
                       </button>
                     </th>
 
                     <th scope="col">Fecha
                       <button class="btn-flecha">
-                        <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957"
-                          viewBox="0 0 10.351 5.957">
-                          <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
-                            <path id="Trazado_479" data-name="Trazado 479"
-                              d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)"
-                              fill="#fff" />
-                            <path id="Trazado_480" data-name="Trazado 480"
-                              d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)"
-                              fill="#fff" />
-                          </g>
-                        </svg>
+                        <img src="assets/flecha.svg">
                       </button>
                     </th>
 
                     <th scope="col" class="th-right">Monto
                       <button class="btn-flecha">
-                        <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957"
-                          viewBox="0 0 10.351 5.957">
-                          <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
-                            <path id="Trazado_479" data-name="Trazado 479"
-                              d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)"
-                              fill="#fff" />
-                            <path id="Trazado_480" data-name="Trazado 480"
-                              d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)"
-                              fill="#fff" />
-                          </g>
-                        </svg>
+                        <img src="assets/flecha.svg">
                       </button>
                     </th>
                   </tr>
@@ -1429,48 +1303,18 @@
                   <tr>
                     <th scope="col" class="th-left">ID
                       <button class="btn-flecha">
-                        <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957"
-                          viewBox="0 0 10.351 5.957">
-                          <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
-                            <path id="Trazado_479" data-name="Trazado 479"
-                              d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)"
-                              fill="#fff" />
-                            <path id="Trazado_480" data-name="Trazado 480"
-                              d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)"
-                              fill="#fff" />
-                          </g>
-                        </svg>
+                        <img src="assets/flecha.svg">
                       </button>
                     </th>
                     <th scope="col">Usuario
                       <button class="btn-flecha">
-                        <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957"
-                          viewBox="0 0 10.351 5.957">
-                          <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
-                            <path id="Trazado_479" data-name="Trazado 479"
-                              d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)"
-                              fill="#fff" />
-                            <path id="Trazado_480" data-name="Trazado 480"
-                              d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)"
-                              fill="#fff" />
-                          </g>
-                        </svg>
+                        <img src="assets/flecha.svg">
                       </button>
                     </th>
 
                     <th scope="col" class="th-right">Fecha
                       <button class="btn-flecha">
-                        <svg class="flecha mt-1" xmlns="http://www.w3.org/2000/svg" width="10.351" height="5.957"
-                          viewBox="0 0 10.351 5.957">
-                          <g id="Grupo_2459" data-name="Grupo 2459" transform="translate(-263.861 -281.136)">
-                            <path id="Trazado_479" data-name="Trazado 479"
-                              d="M269.058,286.1l4.944-4.96,1.284,1.084-5.167,4.874Z" transform="translate(-1.073 0)"
-                              fill="#fff" />
-                            <path id="Trazado_480" data-name="Trazado 480"
-                              d="M269.045,287.11l.97-.915-5.1-4.977-1.053,1.018Z" transform="translate(0 -0.017)"
-                              fill="#fff" />
-                          </g>
-                        </svg>
+                        <img src="assets/flecha.svg">
                       </button>
                     </th>
                   </tr>
@@ -1531,5 +1375,4 @@
     </div>
   </div>
 </div>
-<app-modal [id]="'modal-dashboard'">
-</app-modal>
+<app-modal [id]="'modal-dashboard'"></app-modal>
